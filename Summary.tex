@@ -1,0 +1,28 @@
+To summarise, we evaluated four innovative methods that improve emotion recognition and inference in conversations and addressed most of the research questions raised at the start of the review. We evaluated them from the perspective of their methodologies, results, pros, cons and ablation studies. A common drawback among all models was that they did not perform well on short conversation datasets such as MELD and DailyDialog, possibly due to the them being overwhelmed by excess information. Table \ref{table:1} provides a summary of the datasets used and what remained to be explored in each approach. Other studies such as \cite{Gao2022EmotionRI,Ma2022EmotionRW,Fu2022ContextAK} also aimed to build upon the baseline methods. 
+Another open question still exists. The authors mostly provided a general performance summary of their models, including a lack of examination of individual emotion classes in most cases and difficulty in distinguishing between similar emotions, as seen in Li et. al. \cite{Li2021EnhancingEI}. Future directions include using contrastive learning to distinguish closely related emotions, exploring the use of synthetic data, and studying emotion recognition, inference, and shift detection in low-resource languages through cross-lingual transfer learning and multilingual knowledge integration.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{ |p{1.9cm}||p{2cm}|p{2.1cm}|p{2cm}|p{1.2cm}| p{2.01cm} |p{4cm}|}
+ %\hline
+ %\multicolumn{6}{|c|}{} \\
+ \hline
+ \textbf{Authors} & \textbf{IEMOCAP} & \textbf{DailyDialog} & \textbf{SEMAINE} & \textbf{MELD} & \textbf{EmoryNLP} & \textbf{Wasn't Explored} \\
+ \hline
+ Hazarika et. al.   & \checkmark    & \checkmark&  \checkmark & \crossmark & \crossmark & TL-ERC with hierarchical transformers \\
+ \hline
+ Shen et. al. &   \checkmark & \checkmark  & \crossmark & \checkmark & \checkmark & Emotion shifts. Speaker role embedding\\
+ \hline
+ Li et. al. & \checkmark & \crossmark & \crossmark & \checkmark & \checkmark & Addition of context including information about the setting, subject matter, and personalities of the individuals involved in the conversation. Improvement in the external knowledge used for inference. Issues with error analysis need to be tackled\\
+ \hline
+ Tu et. al. & \crossmark & \checkmark & \crossmark & \checkmark & \checkmark & Identify underlying ideas of common-sense knowledge through examination of sentiments or emotions at the word, sentence, and contextual levels. GCN to grasp the dependency between speakers, with the purpose of enhancing the accuracy of the model.\\
+ \hline
+\end{tabular}
+\captionsetup{justification=centering}
+\caption{Summary of the various datasets used by the discussed approaches and what remains to be explored by each of them}
+\label{table:1}
+\end{table}
+
+
+
+
